@@ -41,6 +41,7 @@ int main(int argc, char* argv[]){
             }
         }
     }
+    
 
     for(int i = 0; i < qtd_n; i++){
         printf("%d ", vetor_ord_n[i]);
