@@ -11,7 +11,7 @@ int main(int argc, char* argv[]){
     printf("\n copia\n");
     imprimir_lista(Hc);
 
-    H->proximo_no->valor = 'X';
+    H->proximo_no->valor = 'E';
     Hc->valor = 'U';
 
     printf("\n");
@@ -22,7 +22,13 @@ int main(int argc, char* argv[]){
     liberar_lista(Hc);
     
     printf("\n qtd = %d", quantidade_nos(H));
-    printf("\n copia qtd = %d", quantidade_nos(Hc));
 
+    printf("\n E existe na lista? %d", verificar_existencia(H, 'E'));
+    printf("\n E ocorre qnts vezes na lista? %d\n", verificar_ocorrencias(H, 'E'));
+
+    imprimir_inversa(H);
+
+    printf("\n");
+    imprimir_lista(H);
     exit(0);
 }
