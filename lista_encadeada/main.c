@@ -29,6 +29,14 @@ int main(int argc, char* argv[]){
     imprimir_inversa(H);
 
     printf("\n");
+    inserir_no_i(H, 2, no('J', NULL));
     imprimir_lista(H);
+    printf("\n");
+
+    remover_no_i(H, 6, NULL);
+    imprimir_lista(H);
+    printf("\n");
+
+
     exit(0);
 }

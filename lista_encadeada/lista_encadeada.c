@@ -74,3 +74,29 @@ void imprimir_inversa(No* H){
         printf("%c ", H->valor);
     }
 }
+
+void inserir_no_i(No* H, int i, No* no){
+    if (H != NULL & i > 0){
+        if(i == 1){
+            no->proximo_no = H->proximo_no;
+            H->proximo_no  = no;
+        }
+        else
+        {
+            inserir_no_i(H->proximo_no, i-1, no);
+        }
+        
+    }
+}
+
+void remover_no_i(No* H, int i, No* no_ant){
+    if(H != NULL){
+        if(i == 0 & no_ant != NULL){
+            no_ant->proximo_no = H->proximo_no;
+            free(H);
+        }
+        else{
+            remover_no_i(H->proximo_no, i-1, H);
+        }
+    }
+}
